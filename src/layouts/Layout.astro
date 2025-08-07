@@ -1,5 +1,21 @@
 ---
-import "../styles/global.css"
+import '@fontsource/montserrat/100.css';
+import '@fontsource/montserrat/200.css';
+import '@fontsource/montserrat/300.css';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/montserrat/800.css';
+import '@fontsource/montserrat/900.css';
+import '@fontsource/saira-stencil-one';
+import "@styles/global.css";
+
+export type Props = {
+	title: string;
+};
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -7,12 +23,14 @@ import "../styles/global.css"
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Ooneex | {title}</title>
+		<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 	</head>
 	<body>
-		<slot />
+		<main>
+			<slot />
+		</main>
 	</body>
 </html>
 
