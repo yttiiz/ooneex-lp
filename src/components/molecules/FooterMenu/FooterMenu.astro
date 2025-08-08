@@ -1,0 +1,57 @@
+---
+import type { FooterDataMdxType } from "@components/types";
+
+const { menu } = Astro.props as FooterDataMdxType;
+---
+
+<div class="menu">
+	{
+		menu.map(({ subtitle, items }) => (
+			<div>
+				<h3>{subtitle}</h3>
+				<ul>
+					{items.map((item) => (
+						<li>
+							<a href={item.link}>{item.textContent}</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		))
+	}
+</div>
+
+<style>
+	.menu {
+		display: flex;
+    flex-direction: column;
+		gap: calc(var(--base-size) * 3);
+
+		& > div {
+			text-align: center;
+		}
+
+		& h3 {
+			font-size: var(--base-size);
+			font-weight: 600;
+			color: var(--secondary-color-default);
+			margin-bottom: calc(var(--base-size) * 1.25);
+		}
+
+		& a {
+			font-size: calc(var(--base-size) * 0.85);
+			font-weight: 400;
+			color: var(--primary-color-content);
+			text-decoration: none;
+			transition: color var(--smooth);
+		}
+	}
+
+	/*=============================================| BREAKPOINTS |=============================================*/
+
+	@media screen and (min-width: 600px) {
+		.menu {
+			flex-direction: row;
+		}
+	}
+</style>

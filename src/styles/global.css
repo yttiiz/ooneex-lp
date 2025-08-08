@@ -211,10 +211,14 @@
   --color-year-300: #4db6ac;
   --color-year-400: #26a69a;
 
+  /* Colors */
   --font-primary: Montserrat, sans-serif;
   --font-sans: InterVariable, system-ui, sans-serif;
   --font-points: "Saira Stencil One", sans-serif;
   --font-number: "Saira Stencil One", sans-serif;
+
+  /* Size */
+  --base-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 @layer base {
@@ -241,16 +245,6 @@
   html {
     scroll-behavior: smooth;
     min-height: 100dvh;
-  }
-
-  ul {
-    /* padding-left: 1rem; */
-    list-style-type: disc !important;
-  }
-
-  ol {
-    /* padding-left: 1rem; */
-    list-style-type: decimal !important;
   }
 
   body {
