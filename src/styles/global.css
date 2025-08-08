@@ -224,7 +224,7 @@
 @layer base {
   * {
     scrollbar-width: thin;
-    scrollbar-color: #432371 transparent;
+    scrollbar-color: var(--color-light-400) transparent;
   }
 
   /* Works on Chrome, Edge, and Safari */
@@ -237,7 +237,7 @@
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #432371;
+    background-color: var(--color-light-400);
     border-radius: 50%;
     border: 1px solid transparent;
   }
