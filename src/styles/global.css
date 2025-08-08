@@ -212,6 +212,7 @@
   --color-year-400: #26a69a;
 
   --font-primary: Montserrat, sans-serif;
+  --font-sans: InterVariable, system-ui, sans-serif;
   --font-points: "Saira Stencil One", sans-serif;
   --font-number: "Saira Stencil One", sans-serif;
 }
@@ -255,6 +256,11 @@
   body {
     min-height: 100%;
     overflow-x: hidden;
+  }
+
+  strong {
+    color: var(--color-secondary);
+    font-weight: 600;
   }
 
   #page-loader {
