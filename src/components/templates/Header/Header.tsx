@@ -6,12 +6,15 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import OoneexLogo from "@assets/ooneex_default_logo.svg";
 
 const navigation = [
-  { href: "/classroom", name: "Classroom" },
-  { href: "/library", name: "Library" },
-  { href: "/market", name: "Market" },
+	{ href: "/classroom", name: "Classroom" },
+	{ href: "/library", name: "Library" },
+	{ href: "/market", name: "Market" },
 ];
 
-const login = { href: "/login", name: "Login" };
+const signin = [
+	{ href: "/login", name: "Login" },
+	{ href: "/signup", name: "Signup" },
+];
 
 export const Header = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,19 +62,29 @@ export const Header = () => {
 						</a>
 					))}
 				</div>
-				<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-					<a
-						href={login.href}
-						className="text-sm/6 font-semibold text-gray-900"
-					>
-						{login.name}{" "}
-						<span
-							className="font-sans"
-							aria-hidden="true"
+				<div className="hidden lg:flex lg:gap-4 lg:flex-1 lg:justify-end">
+					{signin.map((item) => (
+						<a
+							href={item.href}
+							className={`${
+								item.name === "Signup" ? "text-secondary " : ""
+							}text-sm/6 font-semibold text-gray-900`}
 						>
-							&rarr;
-						</span>
-					</a>
+							{item.name === "Signup" ? (
+								<>
+									{item.name}{" "}
+									<span
+										className="font-sans"
+										aria-hidden="true"
+									>
+										&rarr;
+									</span>
+								</>
+							) : (
+								item.name
+							)}
+						</a>
+					))}
 				</div>
 			</nav>
 			<Dialog
@@ -105,7 +118,7 @@ export const Header = () => {
 							/>
 						</button>
 					</div>
-					<div className="mt-6 flow-root">
+					<div className="mt-6 flow-root font-primary">
 						<div className="-my-6 divide-y divide-gray-500/10">
 							<div className="space-y-2 py-6">
 								{navigation.map((item) => (
@@ -119,12 +132,14 @@ export const Header = () => {
 								))}
 							</div>
 							<div className="py-6">
-								<a
-									href={login.href}
-									className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-								>
-									{login.name}
-								</a>
+								{signin.map((item) => (
+									<a
+										href={item.href}
+										className={`${item.name === "Signup" ? "text-secondary " : ""}-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50`}
+									>
+										{item.name}
+									</a>
+								))}
 							</div>
 						</div>
 					</div>
