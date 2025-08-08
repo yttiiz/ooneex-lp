@@ -6,9 +6,9 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import OoneexLogo from "@assets/ooneex_default_logo.svg";
 
 const navigation = [
-  { href: "/features", name: "Features" },
-  { href: "/testimonials", name: "Testimonials" },
-  { href: "/partners", name: "Partners" },
+  { href: "/classroom", name: "Classroom" },
+  { href: "/library", name: "Library" },
+  { href: "/market", name: "Market" },
 ];
 
 const login = { href: "/login", name: "Login" };
