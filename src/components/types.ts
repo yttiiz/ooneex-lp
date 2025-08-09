@@ -8,7 +8,7 @@ export type HeroPropsType = {
 	title: string;
 	hook: string;
 	slogan: string;
-	cat: ItemMdxFileType;
+	cat: LinkType;
 };
 
 export type ImageType = {
@@ -16,14 +16,14 @@ export type ImageType = {
 	alt: string;
 };
 
-export type ItemMdxFileType = {
-	link: string;
+export type LinkType = {
+	href: string;
 	textContent: string;
 };
 
 export type HeaderMdxFileType = {
-	items: ItemMdxFileType[];
-	login: ItemMdxFileType;
+	items: LinkType[];
+	login: LinkType;
 };
 
 export type FeaturePropsType = {
@@ -31,6 +31,7 @@ export type FeaturePropsType = {
 	subtitle: string;
 	description: string;
 	details: DetailsElementType[];
+	link: LinkType;
 	image: { src: ImageMetadata; alt: string };
 };
 
