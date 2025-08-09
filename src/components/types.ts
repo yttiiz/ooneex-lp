@@ -11,6 +11,13 @@ export type HeroPropsType = {
 	cat: LinkType;
 };
 
+export type FooterPropsType = {
+	menu: {
+		subtitle: string;
+		items: LinkType[]
+	}[];
+};
+
 export type ImageType = {
 	src: string;
 	alt: string;
@@ -19,11 +26,6 @@ export type ImageType = {
 export type LinkType = {
 	href: string;
 	textContent: string;
-};
-
-export type HeaderMdxFileType = {
-	items: LinkType[];
-	login: LinkType;
 };
 
 export type FeaturePropsType = {

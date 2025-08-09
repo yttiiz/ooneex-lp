@@ -1,41 +1,46 @@
 ---
 import OoneexLogo from "@assets/ooneex_alternative_white_logo.svg";
-import FooterSlogan from "@components/molecules/FooterSlogan/FooterSlogan.astro"
-import FooterMenu from "@components/molecules/FooterMenu/FooterMenu.astro"
+import FooterSlogan from "@components/molecules/FooterSlogan/FooterSlogan.astro";
+import FooterMenu from "@components/molecules/FooterMenu/FooterMenu.astro";
 
-const slogan = "Shaped by our <strong>community</strong>, designed for <strong>your</strong> personal study <strong>needs</strong>";
 const menu = [
-  { subtitle: "Contact us",
-    items: [
-      { link: "/email", textContent: "Email" },
-      { link: "/slack", textContent: "Slack" }
-    ]
-  },
-  { subtitle: "About Ooneex",
-    items: [
-      { link: "/terms", textContent: "Term and conditions" },
-      { link: "/privacy", textContent: "Privacy Policy" },
-      { link: "/affiliate", textContent: "Affiliate" },
-      { link: "/faq", textContent: "FAQ" }
-    ]
-  },
-  { subtitle: "For Institutions",
-    items: [
-      { link: "/medecine", textContent: "Medecine" },
-      { link: "/pharmacy", textContent: "Pharmacy" },
-      { link: "/nursing", textContent: "Nursing" },
-      { link: "/dentistry", textContent: "Dentistry" }
-    ]
-  },
+	{
+		subtitle: "Contact us",
+		items: [
+			{ href: "/email", textContent: "Email" },
+			{ href: "/slack", textContent: "Slack" },
+		],
+	},
+	{
+		subtitle: "About Ooneex",
+		items: [
+			{ href: "/terms", textContent: "Term and conditions" },
+			{ href: "/privacy", textContent: "Privacy Policy" },
+			{ href: "/affiliate", textContent: "Affiliate" },
+			{ href: "/faq", textContent: "FAQ" },
+		],
+	},
+	{
+		subtitle: "For Institutions",
+		items: [
+			{ href: "/medecine", textContent: "Medecine" },
+			{ href: "/pharmacy", textContent: "Pharmacy" },
+			{ href: "/nursing", textContent: "Nursing" },
+			{ href: "/dentistry", textContent: "Dentistry" },
+		],
+	},
 ];
 ---
 
 <footer>
 	<div class="m-auto font-primary">
-		<div class="footer-logo">
-			<OoneexLogo width={200} height={30.325} />
+		<div class="flex items-center justify-center h-max m-auto">
+			<OoneexLogo
+				width={200}
+				height={30.325}
+			/>
 		</div>
-		<FooterSlogan slogan={slogan} />
+		<FooterSlogan />
 		<FooterMenu menu={menu} />
 		<div class="copyrights">
 			<p>All rights reserved © Ooneex {new Date().getFullYear()}</p>
@@ -59,26 +64,10 @@ const menu = [
 			justify-content: center;
 			gap: calc(var(--base-size) * 2.5);
 		}
-
-		& .footer-logo {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: max-content;
-			margin: auto;
-		}
-
+		
 		& .footer-logo img {
 			width: calc(var(--base-size) * 10);
 			height: auto;
-		}
-
-		& .slogan {
-			text-align: center;
-			font-size: calc(var(--base-size) * 1.15);
-			font-weight: 600;
-			color: var(--color-light);
-			margin-top: calc(var(--base-size) * 0.5);
 		}
 
 		& .copyrights {

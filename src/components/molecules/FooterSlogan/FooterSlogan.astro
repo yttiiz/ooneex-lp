@@ -1,17 +1,19 @@
----
-const { slogan } = Astro.props;
----
-
 <div class="slogan">
-	<p set:html={slogan} />
+	<p class="text-center">
+		Shaped by our <strong>community</strong>, designed for <strong>your</strong>
+		personal study <strong>needs</strong>
+	</p>
 </div>
 
 <style>
 	.slogan {
-		text-align: center;
 		font-size: calc(var(--base-size) * 1.15);
 		font-weight: 600;
-		color: var(--primary-color-content);
 		margin-top: calc(var(--base-size) * 0.5);
+
+		& strong {
+			color: var(--color-secondary);
+			font-weight: inherit;
+		}
 	}
 </style>
