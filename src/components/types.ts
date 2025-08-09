@@ -26,36 +26,14 @@ export type HeaderMdxFileType = {
 	login: ItemMdxFileType;
 };
 
-export type FooterDataMdxType = {
-	slogan: string;
-	menu: { subtitle: string; items: ItemMdxFileType[] }[];
-};
-
-export type WhyOoneexDataMdxType = {
-	title: string;
-	subtitle: string;
-	advantages: string[];
-	cat: ItemMdxFileType;
-	image: ImageType;
-};
-
-export type MedicalDataMdxType = {
+export type FeaturePropsType = {
 	title: string;
 	subtitle: string;
 	description: string;
-	cat: ItemMdxFileType;
-	image: ImageType;
-};
-
-export type ProofDataMdxType = Pick<
-	MedicalDataMdxType,
-	"title" | "description"
->;
-
-export type ReviewDataMdxType = Pick<
-	MedicalDataMdxType,
-	"description" | "image"
-> & {
-	name: string;
-	role: string;
+	details: {
+		detailsTitle: string;
+		detailsDesc: string;
+		detailsIcone: string;
+	},
+	image: ImageType,
 };
