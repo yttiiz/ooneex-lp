@@ -1,0 +1,33 @@
+---
+import type { DetailsElementType } from "@components/mod";
+import Feature from "@components/molecules/Feature/Feature.astro";
+import screenshot from "public/classroom_screenshot.png";
+
+const title = "Your personalised medical classroom";
+const subtitle = "Organise, Share, and Learn – Your Way";
+const description =
+	"Create a private or public virtual classroom for medical students, upload PDFs and medical lecture notes, turn them into interactive flashcards and MCQs for exam preparation, and collaborate with classmates online. Make it private to earn money from your members while building your own learning community. All your notes, flashcards, and MCQs stay organised in your classroom.";
+const details: DetailsElementType[] = [
+	{
+		detailsTitle: "Lorem ipsum dolor",
+		detailsDesc:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		detailsIcone: "system",
+	},
+	{
+		detailsTitle: "Lorem ipsum dolor",
+		detailsDesc:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		detailsIcone: "upload",
+	},
+];
+const image = { src: screenshot, alt: "Classroom screenshot" };
+---
+
+<Feature
+	title={title}
+	subtitle={subtitle}
+	description={description}
+	details={details}
+	image={image}
+/>

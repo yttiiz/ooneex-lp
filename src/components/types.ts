@@ -30,12 +30,14 @@ export type FeaturePropsType = {
 	title: string;
 	subtitle: string;
 	description: string;
-	details: {
-		detailsTitle: string;
-		detailsDesc: string;
-		detailsIcone: IconDetailsType;
-	}[];
-	image: ImageType;
+	details: DetailsElementType[];
+	image: { src: ImageMetadata; alt: string };
+};
+
+export type DetailsElementType = {
+	detailsTitle: string;
+	detailsDesc: string;
+	detailsIcone: IconDetailsType;
 };
 
 export type IconDetailsType =

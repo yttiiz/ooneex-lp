@@ -252,10 +252,6 @@
     overflow-x: hidden;
   }
 
-  strong {
-    color: var(--color-secondary);
-  }
-
   #page-loader {
     height: 12px;
     border-radius: 20px;
