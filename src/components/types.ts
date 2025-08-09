@@ -33,7 +33,15 @@ export type FeaturePropsType = {
 	details: {
 		detailsTitle: string;
 		detailsDesc: string;
-		detailsIcone: string;
-	},
-	image: ImageType,
+		detailsIcone: IconDetailsType;
+	}[];
+	image: ImageType;
 };
+
+export type IconDetailsType =
+	| "upload"
+	| "lock"
+	| "backup"
+	| "system"
+	| "footprint"
+	| "reload";
