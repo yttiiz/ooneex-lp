@@ -33,7 +33,7 @@ export type FeaturePropsType = {
 	subtitle: string;
 	description: string;
 	details: DetailsElementType[];
-	link: LinkType;
+	link?: LinkType;
 	image: { src: ImageMetadata; alt: string };
 };
 
