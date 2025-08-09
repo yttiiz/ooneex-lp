@@ -69,14 +69,20 @@ export const IconDetails = ({ name }: { name: IconDetailsType }) => {
 		}
 	};
 
-	const Svg = ({ children }: { children: ReactNode }) => {
+	const Svg = ({
+		children,
+		color = "text-primary-600",
+	}: {
+		children: ReactNode;
+		color?: string;
+	}) => {
 		return (
 			<svg
 				viewBox="0 0 20 20"
 				fill="currentColor"
 				data-slot="icon"
 				aria-hidden="true"
-				className="absolute top-1 left-1 size-5 text-primary-600"
+				className={`absolute top-1 left-1 size-5 ${color}`}
 			>
 				{children}
 			</svg>
