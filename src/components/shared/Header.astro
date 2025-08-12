@@ -13,7 +13,7 @@ const signin = [
 ];
 ---
 
-<header class="absolute inset-x-0 top-0 z-50">
+<header class="absolute font-primary inset-x-0 top-0 z-50">
 	<nav
 		aria-label="Global"
 		class="flex items-center justify-between p-6 lg:px-8"
@@ -70,7 +70,7 @@ const signin = [
 					<a
 						href={item.href}
 						class={`${
-							item.name === "Signup" ? "text-secondary " : ""
+							item.name === "Signup" ? "text-secondary-text " : ""
 						}text-sm/6 font-semibold text-gray-900`}
 					>
 						{item.name === "Signup" ? (
@@ -155,7 +155,7 @@ const signin = [
 										<a
 											href={item.href}
 											class={`${
-												item.name === "Signup" ? "text-secondary " : ""
+												item.name === "Signup" ? "text-secondary-text " : ""
 											}-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50`}
 										>
 											{item.name}
