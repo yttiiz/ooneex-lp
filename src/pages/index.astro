@@ -1,21 +1,50 @@
 ---
-import Hero from "@components/index/Hero.astro";
-import Layout from "../layouts/Layout.astro";
+import Ambassadors from "@components/index/Ambassadors.astro";
+import Analitycs from "@components/index/Analytics.astro";
+import Books from "@components/index/Books.astro";
 import Classroom from "@components/index/Classroom.astro";
-import Resources from "@components/index/Resources.astro";
+import CTA from "@components/index/CTA.astro";
 import FAQ from "@components/index/FAQ.astro";
+import Flashcards from "@components/index/Flashcards.astro";
+import Folder from "@components/index/Folder.astro";
+import Hero from "@components/index/Hero.astro";
+import Images from "@components/index/Images.astro";
+import Library from "@components/index/Library.astro";
+import Market from "@components/index/Market.astro";
+import Notes from "@components/index/Notes.astro";
+import Partners from "@components/index/Partners.astro";
+import QuestionBank from "@components/index/QuestionBank.astro";
+import Resources from "@components/index/Resources.astro";
+import Search from "@components/index/Search.astro";
 import Stats from "@components/index/Stats.astro";
 import Testimonials from "@components/index/Testimonials.astro";
-
+import Videos from "@components/index/Videos.astro";
+import Footer from "@components/shared/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="The All-in-One Medical Learning Platform">
-	<Hero />
-	<Classroom />
-	<Resources />
-	<Stats />
-	<Testimonials />
-	<FAQ />
+    <Hero />
+    <Stats />
+    <Classroom />
+    <Books />
+    <!-- <Resources /> -->
+    <Videos />
+    <Images />
+    <Notes />
+    <Flashcards />
+    <QuestionBank />
+    <!-- <Folder /> -->
+    <Search />
+    <Analitycs />
+    <Market />
+    <Library />
+    <Testimonials />
+    <Partners />
+    <Ambassadors />
+    <FAQ />
+    <CTA />
+    <Footer />
 </Layout>
